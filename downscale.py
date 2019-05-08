@@ -60,7 +60,7 @@ def downscale(filepath, factor):
     # filepath = os.path.join(*filepath))
 
     try:
-        img.save(make_savename(filepath))
+        img.save(make_savename(filepath), quality=95)
     except Exception as exc:
         print(exc)
         print(filepath)
