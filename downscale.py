@@ -71,9 +71,15 @@ def main(argv):
     Main function
     """
     if len(argv) > 1:
-        filepath = argv[1]
-        downscale(filepath, FACTOR)
+        argv.pop(0)
+        for filepath in argv:
+            downscale(filepath, FACTOR)
     else:
         print("Drag and drop the image to be resized on top of this file.")
+    # if len(argv) > 1:
+    #     filepath = argv[1]
+    #     downscale(filepath, FACTOR)
+    # else:
+    #     print("Drag and drop the image to be resized on top of this file.")
 
 main(sys.argv)
