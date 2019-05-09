@@ -7,6 +7,7 @@ The new image will be named originalname-resized.extension.
 
 import os
 import sys
+
 from PIL import Image
 
 FACTOR = 2
